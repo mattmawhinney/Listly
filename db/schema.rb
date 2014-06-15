@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140614203230) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "items", force: true do |t|
     t.string   "description"
     t.integer  "list_id"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140614203230) do
     t.datetime "updated_at"
   end
 
-  add_index "items", ["list_id"], name: "index_items_on_list_id"
+  add_index "items", ["list_id"], name: "index_items_on_list_id", using: :btree
 
   create_table "lists", force: true do |t|
     t.string   "name"
