@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+ .note-pad  {
+	background: #f8f8f8;
+	width: 100%;
+
+}
+
+td#name, td#description {
+	text-align: left;
+}
+
+
+td {
+	text-align: center;
+}
+
+
