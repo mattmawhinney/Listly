@@ -7,8 +7,12 @@
 
 <p>
   <strong>List:</strong>
-  <%= @item.list %>
+  <%= @item.list.name %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<% if @item.list.nil? %>
+	<%= link_to 'Back', reviews_path %>
+<% else %>
+	<%= link_to 'Back', @item.list %>
+<% end %>

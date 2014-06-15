@@ -5,5 +5,18 @@
   <%= @list.name %>
 </p>
 
-<%= link_to 'Edit', edit_list_path(@list) %> |
+
+
+<h3>Items</h3>
+<% @list.items.each do |item| %> <p>
+<%= item.description %>
+<br>
+Added on: <%= item.created_at %>
+</p> <% end %>
+
+<h3>Add Item</h3>
+<%= render 'items/form' %>
+
+
+<%= link_to 'Change List Name', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>

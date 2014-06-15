@@ -15,10 +15,14 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
-  <div class="field">
-    <%= f.label :list_id %><br>
-    <%= f.text_field :list_id %>
-  </div>
+  <% if @list.nil? %> 
+    <div class="field">
+      <%= f.label :list_id %><br>
+      <%= f.text_field :list_id %> 
+    </div>
+  <% else %>
+      <%= f.hidden_field :list_id, value: @list.id %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
