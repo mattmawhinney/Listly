@@ -6,24 +6,19 @@ $(function() {
 			$('#new-list-text').toggle();
 			$('#never-mind-text').toggle();
 			$('#new-list-form').toggle();
-			// $('#never-mind-button').toggle();
-
-			// $('#new-list-form').attr('style', '');
 			
-
-
-
 		});
 
+		$('.ajax-edit').click(function(evt){
+			evt.preventDefault(); 
+			
+			var get_url = evt.target.parentElement['href'];
+			console.log(get_url);
 
-	
+			$.get(get_url, function( data ) {
+ 				 $( ".ajax-edit" ).html( data );
+  				// alert( "Load was performed." );
+			});
 
-		// $('a[data-confirm="Are you sure?"]').click(function(evt) {
-
-		// 		console.log('clicked');
-		// 		console.log(evt.target);
-
-		// 		evt.target.attr('data-confirm', "Anger!"); 	
-
-		// });
+		});
 });

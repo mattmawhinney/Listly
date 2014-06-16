@@ -1,8 +1,15 @@
 <h2>  <%= @list.name %> </h2>
 
-<h3>Add Item</h3>
-<%= render 'items/form' %>
+<button class="btn-lg btn-danger" id="new-list-button" type="button">
+  <div id="new-list-text">Add Item</div>
+  <div id="never-mind-text" style="display:none">Never Mind</div>
+</button>
 
+<div id="new-list-form" style="display:none">
+
+  <%= render 'items/form' %>
+
+</div>
 
 <table class='note-pad table'>
 	<tbody>

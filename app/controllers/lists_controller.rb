@@ -21,8 +21,14 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
+    render layout: false
   end
 
+  # def form
+  #   render layout: false
+
+
+  # end 
   # POST /lists
   # POST /lists.json
   def create
