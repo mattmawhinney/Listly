@@ -11,12 +11,20 @@ $(function() {
 
 		$('.ajax-edit').click(function(evt){
 			evt.preventDefault(); 
-			
-			var get_url = evt.target.parentElement['href'];
+			var parent_element = evt.target.parentElement;
+			var grandparent_element = parent_element.parentElement;
+			var get_url = parent_element['href'];
+
 			console.log(get_url);
+			// $(parent_element).attr('href', '#' );
 
 			$.get(get_url, function( data ) {
- 				 $( ".ajax-edit" ).html( data );
+					console.log(grandparent_element);
+				 
+ 				 $(grandparent_element).html( data );
+ 				 // $('#pencil-holder:first-child').
+ 				
+
   				// alert( "Load was performed." );
 			});
 
