@@ -1,9 +1,18 @@
-<h1>My Lists</h1>
+<button class="btn-lg btn-danger" id="new-list-button" type="button">
+  <div id="new-list-text">Create New List</div>
+  <div id="never-mind-text" style="display:none">Never Mind</div>
+</button>
+<!-- <button class="btn-lg btn-danger" id="new-list-button" type="button" style="display:none">Never Mind</button> -->
 
-<h3>New List</h3>
 
-<%= render 'form' %>
+<!-- hidden -->
+<div id="new-list-form" style="display:none">
+    <%= render 'form' %>
+  </div>
 
+<!-- use count or length? -->
+<% if ! @lists.empty? %>
+  
 
 <table class="note-pad table">
   <thead>
@@ -20,7 +29,7 @@
     <%= render 'list' %>
   </tbody>
 </table>
-
+<% end %>
 <br>
 
 

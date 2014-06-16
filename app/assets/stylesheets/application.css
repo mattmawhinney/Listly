@@ -29,4 +29,9 @@ td {
 	text-align: center;
 }
 
+#new-list-button, #new-list-form {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
 

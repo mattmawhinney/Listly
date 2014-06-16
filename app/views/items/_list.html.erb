@@ -1,6 +1,16 @@
 <% @list.items.each do |item| %> 
       <tr>
         <td id="description"><%= item.description %></td>
+
+        <td>
+        <form action="items/#{item.id}" method="PUT">
+          <input type="checkbox" name="checked" value="checked" >
+          
+          <!-- <input type="submit" value="Submit"> -->
+        </form>
+
+        </td>
+
         <td>
           <%= link_to edit_item_path(item) do %>
             <i class="fa fa-pencil"></i>
