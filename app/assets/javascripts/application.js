@@ -15,9 +15,11 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).on('page:change', ready);
 
-$(function() { 
-		$('#new-button').click(function(evt) {
+function ready(){
+
+	$('#new-button').click(function(evt) {
 
 
 			$('#new-text').toggle();
@@ -25,6 +27,11 @@ $(function() {
 			$('#new-form').toggle();
 			
 		});
+
+}
+
+$(function() { 
+		
 
 		$('.ajax-edit').click(function(evt){
 			evt.preventDefault(); 
