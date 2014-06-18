@@ -3,7 +3,7 @@
         <td id="description"><%= item.description %></td>
 
         <td>
-        <form action="items/#{item.id}" method="PUT">
+        <form action="#" method="#">
           <input type="checkbox" name="checked" value="checked" >
           
           <!-- <input type="submit" value="Submit"> -->
@@ -13,7 +13,7 @@
 
         <td>
           <%= link_to edit_item_path(item) do %>
-            <i class="fa fa-pencil"></i>
+            <i class="fa fa-pencil ajax-edit"></i>
           <% end %>
         </td>
         <td>
