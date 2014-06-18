@@ -29,7 +29,7 @@ td {
 	text-align: center;
 }
 
-#new-list-button, #new-list-form {
+#new-button, #new-form {
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
