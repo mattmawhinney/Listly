@@ -18,6 +18,8 @@
 
 $(function() { 
 		$('#new-button').click(function(evt) {
+			
+
 			$('#new-text').toggle();
 			$('#never-mind-text').toggle();
 			$('#new-form').toggle();
